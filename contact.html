@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - SIMODE CONSULTANTS</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <div id="cookieConsent" class="cookie-overlay">
+      <div class="cookie-box">
+        <h2>Cookie Consent</h2>
+        <p>
+          We use cookies to enhance your browsing experience and analyze our
+          traffic. Please choose your preference:
+        </p>
+        <div class="cookie-buttons">
+          <button onclick="acceptCookies()" class="btn-accept">
+            Accept All Cookies
+          </button>
+          <button onclick="rejectCookies()" class="btn-reject">
+            Reject All Cookies
+          </button>
+        </div>
+      </div>
+    </div>
+    <header class="main-header">
+      <div class="container">
+        <div class="logo-section">
+          <img
+            src="About Images/2.jpg"
+            alt="SIMODE Logo"
+            style="width: 60px; height: 60px; object-fit: contain"
+          />
+
+          <h1 class="company-name">SIMODE CONSULTANTS</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <section class="page-header">
+      <div class="container">
+        <h1>Get In Touch</h1>
+        <p>We'd love to hear from you. Let us know how we can help!</p>
+      </div>
+    </section>
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p class="info-subtitle">
+              Fill out the form and our team will get back to you within 24
+              hours.
+            </p>
+            <div class="info-items">
+              <div class="info-card">
+                <div class="info-icon">📞</div>
+                <div class="info-content">
+                  <h3>Call Us</h3>
+                  <p>+92 21 1234 5678</p>
+                  <p>+92 300 1234567</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="info-icon">✉️</div>
+                <div class="info-content">
+                  <h3>Email Us</h3>
+                  <p>info@simodeconsultants.com</p>
+                  <p>support@simodeconsultants.com</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="info-icon">📍</div>
+                <div class="info-content">
+                  <h3>Visit Us</h3>
+                  <p>Plot 123, Block A, Clifton</p>
+                  <p>Karachi, Pakistan</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="info-icon">🕒</div>
+                <div class="info-content">
+                  <h3>Working Hours</h3>
+                  <p>Monday - Saturday</p>
+                  <p>9:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="#" class="social-icon">📘</a>
+                <a href="#" class="social-icon">🐦</a>
+                <a href="#" class="social-icon">💼</a>
+                <a href="#" class="social-icon">📸</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-wrapper">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name *</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    placeholder="John"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name *</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    placeholder="Doe"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="john.doe@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    placeholder="+92 300 1234567"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject *</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="quote">Request a Quote</option>
+                  <option value="meeting">Schedule a Meeting</option>
+                  <option value="support">Technical Support</option>
+                  <option value="partnership">Partnership Opportunity</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                  placeholder="Tell us more about your project or inquiry..."
+                ></textarea>
+              </div>
+              <div class="form-group checkbox-group">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="newsletter" name="newsletter" />
+                  <span class="checkmark"></span>
+                  <span class="checkbox-label"
+                    >Subscribe to our newsletter for updates and offers</span
+                  >
+                </label>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn-primary">Send Message</button>
+                <button type="reset" class="btn-secondary">Clear Form</button>
+              </div>
+            </form>
+            <div id="formMessage" class="form-message"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="map-section">
+      <div class="map-container">
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.1!2d67.01!3d24.81!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQ4JzQ0LjQiTiA2N8KwMDAnNDQuNCJF!5e0!3m2!1sen!2s!4v1234567890!5m2!1sen!2s"
+            width="100%"
+            height="350"
+            style="border: 0; border-radius: 15px"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>SIMODE CONSULTANTS</h3>
+            <p>Your trusted MEP solutions partner</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Portals</h4>
+            <ul>
+              <li><a href="employee.html">Employee Login</a></li>
+              <li><a href="applicant.html">Job Applicants</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 SIMODE CONSULTANTS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formMessage = document.getElementById("formMessage");
+          const formData = new FormData(this);
+
+          formMessage.className = "form-message loading";
+          formMessage.innerHTML =
+            '<span class="spinner">⏳</span> Sending your message...';
+
+          setTimeout(() => {
+            formMessage.className = "form-message success";
+            formMessage.innerHTML =
+              "✅ Thank you! Your message has been sent successfully. We will contact you soon.";
+            this.reset();
+
+            setTimeout(() => {
+              formMessage.className = "form-message";
+              formMessage.innerHTML = "";
+            }, 5000);
+          }, 1500);
+        });
+    </script>
+  </body>
+</html>

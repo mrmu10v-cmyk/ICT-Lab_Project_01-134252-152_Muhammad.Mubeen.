@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get a Quote - SIMODE CONSULTANTS</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/quote.css" />
+  </head>
+  <body>
+    <div id="cookieConsent" class="cookie-overlay">
+      <div class="cookie-box">
+        <h2>Cookie Consent</h2>
+        <p>
+          We use cookies to enhance your browsing experience and analyze our
+          traffic. Please choose your preference:
+        </p>
+        <div class="cookie-buttons">
+          <button onclick="acceptCookies()" class="btn-accept">
+            Accept All Cookies
+          </button>
+          <button onclick="rejectCookies()" class="btn-reject">
+            Reject All Cookies
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="main-header">
+      <div class="container">
+        <div class="logo-section">
+          <img
+            src="About Images/2.jpg"
+            alt="SIMODE Logo"
+            style="width: 60px; height: 60px; object-fit: contain"
+          />
+
+          <h1 class="company-name">SIMODE CONSULTANTS</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="quote.html" class="active">Get a Quote</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-header">
+      <div class="container">
+        <h1>Get a Quote</h1>
+        <p>
+          Fill out the form below to receive a detailed quotation for your
+          project
+        </p>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="container">
+        <div class="quote-wrapper">
+          <div class="form-side">
+            <h2>Project Details</h2>
+            <form id="quoteForm">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact">Contact Number *</label>
+                <input
+                  type="tel"
+                  id="contact"
+                  name="contact"
+                  required
+                  placeholder="+92 300 1234567"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="projectType">Project Type *</label>
+                <select id="projectType" name="projectType" required>
+                  <option value="">Select project type</option>
+                  <option value="residential">Residential</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="industrial">Industrial</option>
+                  <option value="hospital">Hospital/Healthcare</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="floors">Number of Floors</label>
+                <input
+                  type="number"
+                  id="floors"
+                  name="floors"
+                  min="1"
+                  placeholder="e.g., 5"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="area">Total Area (sq ft) *</label>
+                <input
+                  type="number"
+                  id="area"
+                  name="area"
+                  required
+                  min="1"
+                  placeholder="e.g., 5000"
+                />
+              </div>
+
+              <div class="form-group">
+                <label>Select Services Required *</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="hvac"
+                      data-rate="15"
+                    />
+                    <span>HVAC Designs ($15/sq ft)</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="firefighting"
+                      data-rate="12"
+                    />
+                    <span>Fire Fighting ($12/sq ft)</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="water"
+                      data-rate="10"
+                    />
+                    <span>Water Supply ($10/sq ft)</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="drainage"
+                      data-rate="8"
+                    />
+                    <span>Drainage ($8/sq ft)</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="medical"
+                      data-rate="20"
+                    />
+                    <span>Medical Gases ($20/sq ft)</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="electrical"
+                      data-rate="18"
+                    />
+                    <span>Electrical Designs ($18/sq ft)</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="plantroom"
+                      data-rate="25"
+                    />
+                    <span>Plantroom Designs ($25/sq ft)</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="services"
+                      value="coordination"
+                      data-rate="14"
+                    />
+                    <span>MEP Coordination ($14/sq ft)</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="timeline">Project Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Select timeline</option>
+                  <option value="urgent">Urgent (1-2 months)</option>
+                  <option value="normal">Normal (3-6 months)</option>
+                  <option value="flexible">Flexible (6+ months)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="additionalInfo">Additional Information</label>
+                <textarea
+                  id="additionalInfo"
+                  name="additionalInfo"
+                  rows="4"
+                  placeholder="Any specific requirements or details about your project..."
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button
+                  type="button"
+                  onclick="calculateQuote()"
+                  class="btn-primary"
+                >
+                  Calculate Quote
+                </button>
+                <button type="reset" class="btn-secondary">Reset Form</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="quote-display">
+            <h2>Your Quotation</h2>
+            <div id="quoteResult" class="quote-result-empty">
+              <div class="empty-state">
+                <span class="icon">📋</span>
+                <p>
+                  Fill out the form and click "Calculate Quote" to see your
+                  estimated quotation
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>SIMODE CONSULTANTS</h3>
+            <p>Your trusted MEP solutions partner</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Portals</h4>
+            <ul>
+              <li><a href="employee.html">Employee Login</a></li>
+              <li><a href="applicant.html">Job Applicants</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 SIMODE CONSULTANTS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/quote.js"></script>
+  </body>
+</html>

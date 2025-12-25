@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Portal - SIMODE CONSULTANTS</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div id="cookieConsent" class="cookie-overlay">
+      <div class="cookie-box">
+        <h2>Cookie Consent</h2>
+        <p>
+          We use cookies to enhance your browsing experience and analyze our
+          traffic. Please choose your preference:
+        </p>
+        <div class="cookie-buttons">
+          <button onclick="acceptCookies()" class="btn-accept">
+            Accept All Cookies
+          </button>
+          <button onclick="rejectCookies()" class="btn-reject">
+            Reject All Cookies
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="main-header">
+      <div class="container">
+        <div class="logo-section">
+          <img
+            src="About Images/2.jpg"
+            alt="SIMODE Logo"
+            style="width: 60px; height: 60px; object-fit: contain"
+          />
+          <h1 class="company-name">SIMODE CONSULTANTS</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <
+    <section class="login-section applicant-section">
+      <div class="login-container">
+        <div class="login-card applicant-card">
+          <div class="login-header">
+            <div class="login-icon">
+              <img
+                src="https://cdn-icons-png.freepik.com/256/14723/14723957.png?semt=ais_white_label"
+                alt="Job Icon"
+              />
+            </div>
+            <h2>Job Application Portal</h2>
+            <p>Join in our team of professionals</p>
+          </div>
+
+          <div class="tab-buttons">
+            <button class="tab-btn active" onclick="showTab('apply')">
+              Apply Now
+            </button>
+            <button class="tab-btn" onclick="showTab('track')">
+              Track Application
+            </button>
+          </div>
+
+          <form id="applicationForm" class="login-form application-form">
+            <div class="form-group">
+              <label for="fullName">
+                <span class="icon">👤</span>
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                required
+                placeholder="Enter your full name"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">
+                  <span class="icon">✉️</span>
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="your.email@example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">
+                  <span class="icon">📞</span>
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="+92 300 1234567"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="position">
+                <span class="icon">💼</span>
+                Position Applied For
+              </label>
+              <select id="position" name="position" required>
+                <option value="">Select Position</option>
+                <option value="mech-eng">Mechanical Engineer</option>
+                <option value="elec-eng">Electrical Engineer</option>
+                <option value="plumb-eng">Plumbing Engineer</option>
+                <option value="hvac-tech">HVAC Technician</option>
+                <option value="project-mgr">Project Manager</option>
+                <option value="cad-designer">CAD Designer</option>
+                <option value="site-eng">Site Engineer</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="experience">
+                  <span class="icon">📊</span>
+                  Experience (Years)
+                </label>
+                <input
+                  type="number"
+                  id="experience"
+                  name="experience"
+                  min="0"
+                  required
+                  placeholder="0"
+                />
+              </div>
+              <div class="form-group">
+                <label for="qualification">
+                  <span class="icon">🎓</span>
+                  Qualification
+                </label>
+                <select id="qualification" name="qualification" required>
+                  <option value="">Select</option>
+                  <option value="bachelor">Bachelor's Degree</option>
+                  <option value="master">Master's Degree</option>
+                  <option value="diploma">Diploma</option>
+                  <option value="phd">PhD</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="resume">
+                <span class="icon">📄</span>
+                Upload Resume (PDF, Max 5MB)
+              </label>
+              <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf"
+                required
+              />
+              <small class="file-info">Accepted format: PDF only</small>
+            </div>
+
+            <div class="form-group">
+              <label for="coverLetter">
+                <span class="icon">📝</span>
+                Cover Letter (Max 500 characters)
+              </label>
+              <textarea
+                id="coverLetter"
+                name="coverLetter"
+                rows="4"
+                maxlength="500"
+                placeholder="Tell us why you'd be a great fit..."
+                onkeyup="updateCharCount(this)"
+              ></textarea>
+              <small class="char-counter"
+                ><span id="charCount">0</span>/500 characters</small
+              >
+            </div>
+
+            <button type="submit" class="btn-login">
+              <span class="icon">📤</span>
+              Submit Application
+            </button>
+          </form>
+
+          <form
+            id="trackForm"
+            class="login-form track-form"
+            style="display: none"
+          >
+            <div class="form-group">
+              <label for="trackEmail">
+                <span class="icon">✉️</span>
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="trackEmail"
+                name="trackEmail"
+                required
+                placeholder="your.email@example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="applicationId">
+                <span class="icon">🆔</span>
+                Application ID
+              </label>
+              <input
+                type="text"
+                id="applicationId"
+                name="applicationId"
+                required
+                placeholder="Enter your Application ID"
+              />
+              <small class="file-info"
+                >You received this ID via email after applying</small
+              >
+            </div>
+
+            <button type="submit" class="btn-login">
+              <span class="icon">🔍</span>
+              Track Application
+            </button>
+          </form>
+
+          <div id="applicationMessage" class="login-message"></div>
+        </div>
+
+        <div class="login-info">
+          <div class="info-box">
+            <h3>🎯 Why Join Us?</h3>
+            <ul>
+              <li>✅ Competitive salary packages</li>
+              <li>✅ Career growth opportunities</li>
+              <li>✅ Health insurance benefits</li>
+              <li>✅ Professional development</li>
+              <li>✅ Work-life balance</li>
+              <li>✅ Modern work environment</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h3>📋 Current Openings</h3>
+            <div class="job-list">
+              <div class="job-item">
+                <strong>Mechanical Engineer</strong>
+                <span class="badge">3 Positions</span>
+              </div>
+              <div class="job-item">
+                <strong>Electrical Engineer</strong>
+                <span class="badge">2 Positions</span>
+              </div>
+              <div class="job-item">
+                <strong>Project Manager</strong>
+                <span class="badge">1 Position</span>
+              </div>
+              <div class="job-item">
+                <strong>HVAC Technician</strong>
+                <span class="badge">4 Positions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <h3>📞 Questions?</h3>
+            <p>Contact Recruitment Team:</p>
+            <p><strong>Email:</strong> careers@simodeconsultants.com</p>
+            <p><strong>Phone:</strong> +92 21 1234 5678 (Ext: 102)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>SIMODE CONSULTANTS</h3>
+            <p>Your trusted MEP solutions partner</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Portals</h4>
+            <ul>
+              <li><a href="employee.html">Employee Login</a></li>
+              <li><a href="applicant.html">Job Applicants</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 SIMODE CONSULTANTS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+      function showTab(tab) {
+        const applyForm = document.getElementById("applicationForm");
+        const trackForm = document.getElementById("trackForm");
+        const tabButtons = document.querySelectorAll(".tab-btn");
+
+        if (tab === "apply") {
+          applyForm.style.display = "flex";
+          trackForm.style.display = "none";
+          tabButtons[0].classList.add("active");
+          tabButtons[1].classList.remove("active");
+        } else {
+          applyForm.style.display = "none";
+          trackForm.style.display = "flex";
+          tabButtons[0].classList.remove("active");
+          tabButtons[1].classList.add("active");
+        }
+      }
+
+      function updateCharCount(textarea) {
+        const count = textarea.value.length;
+        const counter = document.getElementById("charCount");
+        counter.textContent = count;
+
+        if (count > 450) {
+          counter.style.color = "#f44336";
+        } else if (count > 400) {
+          counter.style.color = "#ff9800";
+        } else {
+          counter.style.color = "#4CAF50";
+        }
+      }
+
+      document
+        .getElementById("applicationForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          showMessage(
+            "✅ Application submitted successfully! You will receive a confirmation email with your Application ID shortly.",
+            "success"
+          );
+          this.reset();
+          document.getElementById("charCount").textContent = "0";
+        });
+
+      document
+        .getElementById("trackForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          showMessage(
+            "📊 Your application is currently under review. You will be contacted within 5-7 business days.",
+            "success"
+          );
+        });
+
+      function showMessage(text, type) {
+        const msg = document.getElementById("applicationMessage");
+        msg.className = `login-message ${type}`;
+        msg.textContent = text;
+        msg.style.display = "block";
+        setTimeout(() => {
+          msg.style.display = "none";
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>

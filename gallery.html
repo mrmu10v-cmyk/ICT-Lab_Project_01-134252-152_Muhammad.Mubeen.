@@ -1,0 +1,634 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - SIMODE CONSULTANTS</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+  </head>
+  <body>
+    <div id="cookieConsent" class="cookie-overlay">
+      <div class="cookie-box">
+        <h2>Cookie Consent</h2>
+        <p>
+          We use cookies to enhance your browsing experience and analyze our
+          traffic. Please choose your preference:
+        </p>
+        <div class="cookie-buttons">
+          <button onclick="acceptCookies()" class="btn-accept">
+            Accept All Cookies
+          </button>
+          <button onclick="rejectCookies()" class="btn-reject">
+            Reject All Cookies
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="main-header">
+      <div class="container">
+        <div class="logo-section">
+          <img
+            src="About Images/2.jpg"
+            alt="SIMODE Logo"
+            style="width: 60px; height: 60px; object-fit: contain"
+          />
+          <h1 class="company-name">SIMODE CONSULTANTS</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="gallery-hero">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <h1>Our Project Gallery</h1>
+        <p>Showcasing Excellence in MEP Engineering</p>
+      </div>
+    </section>
+
+    <section class="filter-section">
+      <div class="container">
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+          <button class="filter-btn" data-filter="3d-renders">
+            3D Renders
+          </button>
+          <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-grid">
+          <div class="gallery-item" data-category="completed">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="Projects Images/1.png"
+                  alt="Commercial Complex"
+                  style="width: 100%; height: 280px; object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Commercial Complex MEP</h3>
+                    <p>Complete MEP solutions for 15-story building</p>
+                    <button class="view-btn" onclick="openLightbox(0)">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <span class="badge badge-completed">Completed</span>
+                <h4>Downtown Plaza</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="completed">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="Projects Images/2.png"
+                  alt="Hospital"
+                  style="width: 100%; height: 280px; object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Hospital HVAC System</h3>
+                    <p>Advanced HVAC and medical gas systems</p>
+                    <button class="view-btn" onclick="openLightbox(1)">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <span class="badge badge-completed">Completed</span>
+                <h4>City General Hospital</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="completed">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="Projects Images/3.png"
+                  alt="Residential"
+                  style="width: 100%; height: 280px; object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Residential Complex</h3>
+                    <p>Complete MEP design for 200 apartments</p>
+                    <button class="view-btn" onclick="openLightbox(2)">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <span class="badge badge-completed">Completed</span>
+                <h4>Green Valley Residency</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="3d-renders">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="Projects Images/4.png"
+                  alt="Plantroom"
+                  style="width: 100%; height: 280px; object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Plantroom 3D Design</h3>
+                    <p>Optimized plantroom layout visualization</p>
+                    <button class="view-btn" onclick="openLightbox(3)">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <span class="badge badge-render">3D Render</span>
+                <h4>Industrial Plantroom</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="3d-renders">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="Projects Images/5.png"
+                  alt="MEP Coordination"
+                  style="width: 100%; height: 280px; object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>MEP Coordination Model</h3>
+                    <p>BIM-based MEP coordination</p>
+                    <button class="view-btn" onclick="openLightbox(4)">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <span class="badge badge-render">3D Render</span>
+                <h4>MEP Integration</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="3d-renders">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="Projects Images/6.png"
+                  alt="Fire Fighting"
+                  style="width: 100%; height: 280px; object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Fire Fighting System</h3>
+                    <p>Complete fire safety system visualization</p>
+                    <button class="view-btn" onclick="openLightbox(5)">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <span class="badge badge-render">3D Render</span>
+                <h4>Safety Systems</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="ongoing">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="Projects Images/7.png"
+                  alt="Mall"
+                  style="width: 100%; height: 280px; object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Shopping Mall MEP</h3>
+                    <p>Large-scale commercial MEP installation</p>
+                    <button class="view-btn" onclick="openLightbox(6)">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <span class="badge badge-ongoing">Ongoing</span>
+                <h4>Mega Mall Project</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="ongoing">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="Projects Images/8.png"
+                  alt="Office Tower"
+                  style="width: 100%; height: 280px; object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Office Tower</h3>
+                    <p>30-story office building MEP works</p>
+                    <button class="view-btn" onclick="openLightbox(7)">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <span class="badge badge-ongoing">Ongoing</span>
+                <h4>Tech Hub Tower</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="ongoing">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="Projects Images/9.png"
+                  alt="University"
+                  style="width: 100%; height: 280px; object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="overlay-content">
+                    <h3>Educational Institution</h3>
+                    <p>University campus MEP infrastructure</p>
+                    <button class="view-btn" onclick="openLightbox(8)">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-info">
+                <span class="badge badge-ongoing">Ongoing</span>
+                <h4>National University</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+      <div class="lightbox-content">
+        <div class="lightbox-image">
+          <img
+            id="lightboxImage"
+            src=""
+            alt="Project"
+            style="
+              width: 100%;
+              height: 600px;
+              object-fit: cover;
+              border-radius: 10px;
+            "
+          />
+        </div>
+        <div class="lightbox-info">
+          <h2 id="lightbox-title">Project Title</h2>
+          <div id="lightbox-meta" class="lightbox-meta"></div>
+          <p id="lightbox-description">Project description goes here...</p>
+          <div id="lightbox-services" class="lightbox-services"></div>
+        </div>
+      </div>
+      <button class="lightbox-nav prev" onclick="navigateLightbox(-1)">
+        ‹
+      </button>
+      <button class="lightbox-nav next" onclick="navigateLightbox(1)">›</button>
+    </div>
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>SIMODE CONSULTANTS</h3>
+            <p>Your trusted MEP solutions partner</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Portals</h4>
+            <ul>
+              <li><a href="employee.html">Employee Login</a></li>
+              <li><a href="applicant.html">Job Applicants</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 SIMODE CONSULTANTS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      const projects = [
+        {
+          title: "Metro Tower Commercial Complex",
+          location: "Karachi, Pakistan",
+          area: "450,000 sq ft",
+          floors: "25 Floors",
+          year: "2023",
+          status: "Completed",
+          description:
+            "A landmark 25-story commercial tower in the heart of Karachi's business district. SIMODE CONSULTANTS provided comprehensive MEP design including advanced HVAC systems with VRF technology, complete electrical distribution with backup generators, fire fighting systems meeting international standards, and intelligent building management systems.",
+          services: [
+            "Complete HVAC design with VRF",
+            "Electrical power distribution (11KV to LV)",
+            "Fire fighting & alarm systems",
+            "Plumbing & drainage networks",
+            "BMS integration",
+          ],
+          image:
+            "https://static.propsearch.ae/dubai-locations/metro-tower_GBH54_xl.jpg",
+          smallImage: "Projects Images/1.png",
+        },
+        {
+          title: "City General Hospital",
+          location: "Lahore, Pakistan",
+          area: "280,000 sq ft",
+          floors: "8 Floors",
+          year: "2022",
+          status: "Completed",
+          description:
+            "A state-of-the-art 300-bed multi-specialty hospital featuring advanced MEP infrastructure...",
+          services: [
+            "Medical gas pipeline systems (O2, N2O, Medical Air, Vacuum)",
+            "Specialized HVAC with HEPA filtration",
+            "Dual power supply with UPS backup",
+            "Advanced fire detection & suppression",
+            "Water treatment & storage systems",
+          ],
+          image:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pasay_City_General_Hospital_01.jpg/3888px-Pasay_City_General_Hospital_01.jpg",
+          smallImage: "Projects Images/2.png",
+        },
+        {
+          title: "Green Valley Residency",
+          location: "Islamabad, Pakistan",
+          area: "350,000 sq ft",
+          floors: "6 Towers",
+          year: "2023",
+          status: "Completed",
+          description:
+            "An upscale residential development featuring six towers with premium apartments...",
+          services: [
+            "Individual VRF AC systems per apartment",
+            "Solar water heating installation",
+            "Rainwater harvesting system",
+            "Smart home electrical systems",
+            "Sewage treatment plant",
+          ],
+          image:
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/336765431.jpg?k=0a9b5bc0ed9beafdbae5cb8aa7afc540293ff8c6d0dea8cb00f99b2a6281e094&o=",
+          smallImage: "Projects Images/3.png",
+        },
+        {
+          title: "Industrial Plantroom 3D Design",
+          location: "Faisalabad, Pakistan",
+          area: "15,000 sq ft",
+          floors: "Single Level",
+          year: "2023",
+          status: "3D Render",
+          description:
+            "A comprehensive 3D design and visualization of an industrial plantroom...",
+          services: [
+            "3D MEP Modeling",
+            "Equipment Layout Optimization",
+            "Piping Route Design",
+            "Clash Detection Analysis",
+            "BIM Coordination",
+          ],
+          image:
+            "https://c8.alamy.com/comp/BBPEY6/industrial-building-new-plant-room-BBPEY6.jpg",
+          smallImage: "Projects Images/4.png",
+        },
+        {
+          title: "MEP Coordination & Integration Model",
+          location: "Islamabad, Pakistan",
+          area: "520,000 sq ft",
+          floors: "30 Floors",
+          year: "2024",
+          status: "3D Render",
+          description:
+            "Advanced BIM-based MEP coordination model for a high-rise office tower...",
+          services: [
+            "BIM 3D Modeling",
+            "MEP Clash Detection",
+            "System Integration Coordination",
+            "Shop Drawing Generation",
+            "As-Built Documentation",
+          ],
+          image:
+            "https://innodez.com/wp-content/uploads/2025/01/MEP-Design1-851x443.jpg",
+          smallImage: "Projects Images/5.png",
+        },
+        {
+          title: "Fire Fighting & Safety Systems Visualization",
+          location: "Karachi, Pakistan",
+          area: "680,000 sq ft",
+          floors: "5 Floors",
+          year: "2024",
+          status: "3D Render",
+          description:
+            "Complete 3D visualization of fire safety systems for a large shopping complex...",
+          services: [
+            "Sprinkler System Design",
+            "Hydrant Network Layout",
+            "Fire Alarm System Integration",
+            "Smoke Detection Zones",
+            "Emergency Evacuation Planning",
+          ],
+          image:
+            "https://thumbs.dreamstime.com/b/fire-fighting-system-29079591.jpg",
+          smallImage: "Projects Images/6.png",
+        },
+        {
+          title: "Mega Mall Shopping Complex",
+          location: "Karachi, Pakistan",
+          area: "680,000 sq ft",
+          floors: "5 Floors + Basement",
+          year: "2024",
+          status: "Ongoing",
+          description:
+            "A massive retail and entertainment destination featuring international brands...",
+          services: [
+            "Central HVAC plant with AHUs (3000 TR)",
+            "Kitchen exhaust & ventilation systems",
+            "Sprinkler & hydrant fire systems",
+            "Multi-tenant electrical distribution",
+            "Chilled water distribution network",
+          ],
+          image:
+            "https://www.shutterstock.com/image-photo/03-july-2025-almaty-kazakhstan-600w-2670420075.jpg",
+          smallImage: "Projects Images/7.png",
+        },
+        {
+          title: "Tech Hub Business Center",
+          location: "Islamabad, Pakistan",
+          area: "520,000 sq ft",
+          floors: "30 Floors",
+          year: "2024",
+          status: "Ongoing",
+          description:
+            "Pakistan's premier tech-focused office tower designed to international standards...",
+          services: [
+            "Chilled water HVAC plant (1500 TR capacity)",
+            "Redundant electrical systems (N+1 generators)",
+            "Data center precision cooling",
+            "FM-200 fire suppression systems",
+            "BMS & building automation",
+          ],
+          image:
+            "https://images.unsplash.com/photo-1746046936818-8d432ebd3d0e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRlY2glMjBodWJ8ZW58MHx8MHx8fDA%3D",
+          smallImage: "Projects Images/8.png",
+        },
+        {
+          title: "National University Academic Complex",
+          location: "Peshawar, Pakistan",
+          area: "220,000 sq ft",
+          floors: "6 Floors",
+          year: "2024",
+          status: "Ongoing",
+          description:
+            "A modern educational facility designed to accommodate 5,000 students...",
+          services: [
+            "Split & centralized AC systems",
+            "Laboratory exhaust & fume extraction",
+            "Stable power with voltage stabilization",
+            "Fire alarm & evacuation systems",
+            "High-capacity water storage & distribution",
+          ],
+          image: "https://www.citysearch.pk/UF/Companies/24/fast-islamabad.jpg",
+          smallImage: "Projects Images/9.png",
+        },
+      ];
+
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          galleryItems.forEach((item) => {
+            if (filter === "all" || item.dataset.category === filter) {
+              item.style.display = "block";
+              setTimeout(() => {
+                item.style.opacity = "1";
+                item.style.transform = "scale(1)";
+              }, 10);
+            } else {
+              item.style.opacity = "0";
+              item.style.transform = "scale(0.8)";
+              setTimeout(() => {
+                item.style.display = "none";
+              }, 300);
+            }
+          });
+        });
+      });
+
+      let currentLightboxIndex = 0;
+
+      function openLightbox(index) {
+        currentLightboxIndex = index;
+        const project = projects[index];
+
+        document.getElementById("lightbox-title").textContent = project.title;
+        document.getElementById("lightbox-description").textContent =
+          project.description;
+        document.getElementById("lightboxImage").src = project.image;
+        document.getElementById("lightboxImage").alt = project.title;
+
+        document.getElementById("lightbox").style.display = "flex";
+        document.body.style.overflow = "hidden";
+
+        updateNavButtons();
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      function navigateLightbox(direction) {
+        currentLightboxIndex += direction;
+        if (currentLightboxIndex < 0)
+          currentLightboxIndex = projects.length - 1;
+        if (currentLightboxIndex >= projects.length) currentLightboxIndex = 0;
+
+        openLightbox(currentLightboxIndex);
+
+        updateNavButtons();
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLightbox();
+      });
+
+      const prevBtn = document.querySelector(".lightbox-nav.prev");
+      const nextBtn = document.querySelector(".lightbox-nav.next");
+
+      function updateNavButtons() {
+        if (!prevBtn || !nextBtn) return;
+
+        prevBtn.style.display = currentLightboxIndex === 0 ? "none" : "flex";
+
+        nextBtn.style.display =
+          currentLightboxIndex === projects.length - 1 ? "none" : "flex";
+      }
+    </script>
+  </body>
+</html>
