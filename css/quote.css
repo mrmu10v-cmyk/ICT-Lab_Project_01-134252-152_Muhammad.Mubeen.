@@ -1,0 +1,385 @@
+.quote-section {
+  padding: 60px 0;
+  background: var(--light-gray);
+}
+
+.quote-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.form-side {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px var(--shadow);
+  animation: slideInLeft 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.form-side h2 {
+  color: var(--primary-green);
+  font-size: 28px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--light-green);
+  padding-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--dark-gray);
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--border-gray);
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: var(--light-gray);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.checkbox-label:hover {
+  background: rgba(76, 175, 80, 0.1);
+  border-color: var(--light-green);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  accent-color: var(--primary-green);
+}
+
+.checkbox-label span {
+  font-size: 15px;
+  color: var(--dark-gray);
+}
+
+.checkbox-label input[type="checkbox"]:checked + span {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+.quote-display {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px var(--shadow);
+  position: sticky;
+  top: 100px;
+  animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.quote-display h2 {
+  color: var(--primary-green);
+  font-size: 28px;
+  margin-bottom: 25px;
+  border-bottom: 3px solid var(--light-green);
+  padding-bottom: 15px;
+}
+
+.quote-result-empty {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+.empty-state .icon {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.empty-state p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.quote-content {
+  animation: fadeInScale 0.5s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.client-info {
+  background: var(--light-gray);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.client-info h3 {
+  color: var(--primary-green);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.info-value {
+  color: var(--dark-gray);
+}
+
+.services-breakdown {
+  margin-bottom: 25px;
+}
+
+.services-breakdown h3 {
+  color: var(--primary-green);
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.service-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: var(--light-gray);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.service-line:hover {
+  background: rgba(76, 175, 80, 0.1);
+  transform: translateX(5px);
+}
+
+.service-name {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.service-cost {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+.quote-total {
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--medium-green)
+  );
+  color: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quote-total h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.total-amount {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.quote-note {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.quote-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quote-actions button {
+  width: 100%;
+}
+
+.disclaimer {
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 25px;
+}
+
+.disclaimer p {
+  font-size: 13px;
+  color: var(--dark-gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 968px) {
+  .quote-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .form-side,
+  .quote-display {
+    padding: 30px 25px;
+  }
+
+  .quote-display {
+    position: static;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .total-amount {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-section {
+    padding: 40px 0;
+  }
+
+  .form-side,
+  .quote-display {
+    padding: 25px 20px;
+  }
+
+  .form-side h2,
+  .quote-display h2 {
+    font-size: 24px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .checkbox-label {
+    padding: 10px;
+  }
+
+  .checkbox-label span {
+    font-size: 14px;
+  }
+
+  .total-amount {
+    font-size: 32px;
+  }
+
+  .empty-state .icon {
+    font-size: 48px;
+  }
+
+  .empty-state p {
+    font-size: 14px;
+  }
+}
